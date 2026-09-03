@@ -1,0 +1,171 @@
+@use "_variables" as v
+.hero
+    min-height: 720px
+    overflow: hidden
+
+    &__container
+        min-height: 720px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        align-items: center
+
+    &__content
+        position: relative
+        z-index: 2
+        padding-right: 40px
+
+        h1
+            max-width: 600px
+
+            font-family: v.$heading-font
+            font-size: 64px
+            line-height: 1
+            font-weight: 400
+            color: v.$dark
+
+    &__buttons
+        margin-top: 40px
+        display: flex
+        gap: 32px
+
+    &__button-group
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        p
+            margin-bottom: 4px
+            font-size: 14px
+            font-weight: 500
+
+.main-button
+    width: 185px
+    height: 64px
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    padding: 0 24px 0 31px
+
+    background: v.$white
+    border-radius: v.$button-radius
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1)
+
+    font-size: 20px
+    font-weight: 500
+
+    strong
+        width: 40px
+        height: 40px
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        margin-right: -8px
+
+        border-radius: 50%
+        background: v.$green
+        color: v.$white
+
+    &--orange
+        width: 239px
+
+        strong
+            background: v.$orange
+
+.hero__art
+    position: relative
+    height: 560px
+
+.hero__green-circle
+    position: absolute
+    width: 368px
+    height: 368px
+
+    left: 30%
+    top: 20%
+
+    border-radius: 50%
+
+    background: linear-gradient(
+        90deg,
+        v.$green,
+        #C0D8C7
+    )
+
+.hero__blue-line
+    position: absolute
+
+    width: 224px
+    height: 700px
+
+    left: 35%
+    top: -10%
+
+    border-radius: 20px
+
+    background: linear-gradient(
+        180deg,
+        transparent 40%,
+        rgba(35, 83, 243, .6) 60%,
+        v.$dark 85%
+    )
+
+    transform: rotate(-27deg)
+
+.hero__green-line
+    position: absolute
+
+    width: 224px
+    height: 700px
+
+    left: 55%
+    top: 30%
+
+    border-radius: 20px
+
+    background: linear-gradient(
+        180deg,
+        v.$green,
+        transparent
+    )
+
+    transform: rotate(-27deg)
+
+.hero__orange-circle
+    position: absolute
+
+    width: 320px
+    height: 320px
+
+    right: -5%
+    bottom: 0
+
+    border-radius: 50%
+
+    background: linear-gradient(
+        45deg,
+        #EB771C 26%,
+        v.$white
+    )
+
+.hero__person
+    position: absolute
+    z-index: 2
+
+    width: 360px
+    height: 360px
+
+    left: 27%
+    top: 23%
+
+    border-radius: 50%
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.2),
+        rgba(8,101,35,.15)
+    )

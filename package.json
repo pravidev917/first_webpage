@@ -1,0 +1,17 @@
+{
+  "name": "first_webpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch styles/main.sass:styles/main.css",
+    "build": "sass styles/main.sass:styles/main.css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
+}
