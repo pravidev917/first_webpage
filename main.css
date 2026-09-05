@@ -438,15 +438,16 @@ button {
   opacity: 0.65;
 }
 
-@media (min-width: 250px) and (max-width: 980px) {
+@media (min-width: 250px) and (max-width: 1100px) {
   body {
-    padding-left: 250px;
+    padding-left: 220px;
+    overflow-x: hidden;
   }
   .header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 220px;
     height: 100vh;
     z-index: 1000;
   }
@@ -456,25 +457,27 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding: 30px 20px;
+    padding: 25px 15px;
     box-sizing: border-box;
   }
   .logo {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   .navigation {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 14px;
     width: 100%;
+  }
+  .navigation a {
+    font-size: 14px;
   }
   .header__right {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 12px;
     width: 100%;
     margin-top: auto;
   }
@@ -482,14 +485,23 @@ button {
   .header__right .language,
   .header__right .login {
     display: block;
+    font-size: 14px;
   }
   .header__button {
     width: 100%;
     min-width: auto;
+    font-size: 14px;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
   }
   .hero {
     min-height: auto;
-    padding: 60px 0;
+    padding: 45px 0;
   }
   .hero__container {
     grid-template-columns: 1fr;
@@ -502,80 +514,236 @@ button {
     padding: 0;
   }
   .hero__content h1 {
-    font-size: 46px;
-    line-height: 1.05;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
   }
   .hero__buttons {
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
   }
   .intro {
-    padding-top: 50px;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
   .intro__content h2 {
-    font-size: 42px;
+    font-size: 30px;
+    font-weight: 700;
   }
   .intro__content p {
-    font-size: 17px;
+    font-size: 15px;
+    line-height: 1.6;
   }
   .tabs {
     height: auto;
     grid-template-columns: 1fr;
-    border-radius: 20px;
+    border-radius: 15px;
   }
   .tabs__item {
-    min-height: 70px;
+    min-height: 55px;
+    padding: 12px;
+    font-size: 14px;
   }
   .platform {
     grid-template-columns: 1fr;
   }
   .platform__image {
-    min-height: 400px;
+    min-height: 300px;
     border-radius: 20px;
   }
   .platform__content {
-    padding: 60px 40px;
-    border-radius: 30px;
+    padding: 40px 25px;
+    border-radius: 20px;
   }
   .platform__content h3 {
-    font-size: 38px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .platform__content p {
+    font-size: 15px;
+    line-height: 1.6;
   }
   .platform__actions {
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
   }
   .stats {
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
   .stats h2 {
-    font-size: 42px;
+    font-size: 30px;
+    font-weight: 700;
   }
   .stats__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .stats__item {
+    padding: 15px;
+  }
+  .stats__item h3 {
+    font-size: 28px;
+  }
+  .stats__item p {
+    font-size: 14px;
+  }
+  .partners {
+    padding: 40px 20px;
   }
   .partners h2 {
-    font-size: 42px;
+    font-size: 30px;
+    font-weight: 700;
   }
   .partners__logos {
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
   }
 }
-@media (max-width: 480px) {
-  .container {
-    width: calc(100% - 30px);
+@media (max-width: 249px) {
+  body {
+    padding-left: 115px;
+    overflow-x: hidden;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 115px;
+    height: 100vh;
+    z-index: 1000;
+  }
+  .header__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 8px;
+    box-sizing: border-box;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .logo img {
+    max-width: 80px;
+    height: auto;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .navigation a {
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .header__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: auto;
+  }
+  .header__right .search,
+  .header__right .language,
+  .header__right .login {
+    display: block;
+    font-size: 11px;
+  }
+  .header__button {
+    width: 100%;
+    min-width: auto;
+    padding: 8px 4px;
+    font-size: 10px;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .hero {
+    padding: 30px 0;
   }
   .hero__content h1 {
-    font-size: 40px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .hero__buttons {
+    gap: 8px;
+  }
+  .intro {
+    padding: 25px 0;
+  }
+  .intro__content h2 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .intro__content p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .tabs {
+    border-radius: 10px;
+  }
+  .tabs__item {
+    min-height: 45px;
+    padding: 8px;
+    font-size: 11px;
+  }
+  .platform__image {
+    min-height: 180px;
+    border-radius: 12px;
+  }
+  .platform__content {
+    padding: 25px 15px;
+    border-radius: 12px;
+  }
+  .platform__content h3 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .platform__content p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .platform__actions {
+    gap: 8px;
+  }
+  .stats {
+    padding: 25px 10px;
+  }
+  .stats h2 {
+    font-size: 22px;
+    font-weight: 700;
   }
   .stats__grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
-  .main-button {
-    width: 100%;
+  .stats__item {
+    padding: 10px;
   }
-  .main-button--orange {
-    width: 100%;
+  .stats__item h3 {
+    font-size: 22px;
+  }
+  .stats__item p {
+    font-size: 11px;
+  }
+  .partners {
+    padding: 25px 10px;
+  }
+  .partners h2 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .partners__logos {
+    gap: 10px;
   }
 }
 
