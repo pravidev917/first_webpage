@@ -739,206 +739,127 @@ button
 
 
 
-// ========================================
-// MOBILE
-// 0px - 480px
-// ========================================
-
-@media (max-width: 480px)
-
-    .container
-        width: calc(100% - 30px)
+.mobile-navbar
+    display: none
 
 
-    // Mobile navbar
+@media (max-width: 980px)
+
+    .header
+        display: none
+
+    .mobile-navbar
+        display: block
+
     .mobile-navbar__bar
-        height: 60px
+        position: sticky
+        top: 0
+        z-index: 1000
 
+        width: 100%
+        height: 70px
 
-    .mobile-navbar__collapse
-        top: 60px
-        max-height: calc(100vh - 60px)
+        background: v.$white
+        border-bottom: 1px solid #eeeeee
 
+    .mobile-navbar__bar-container
+        width: calc(100% - 30px)
+        height: 100%
+        margin: 0 auto
+
+        display: flex
+        align-items: center
+        justify-content: space-between
 
     .mobile-navbar__brand
-        font-size: 20px
-
+        color: v.$dark
+        text-decoration: none
+        font-size: 24px
+        font-weight: 700
 
     .mobile-navbar__toggler
-        width: 40px
-        height: 36px
+        width: 45px
+        height: 40px
 
+        display: flex
+        align-items: center
+        justify-content: center
+
+        background: white
+        border: 1px solid #cccccc
+        border-radius: 6px
+
+        cursor: pointer
+
+    .mobile-navbar__icon
+        font-size: 23px
+        color: v.$dark
+        line-height: 1
+
+    // COLLAPSED MENU
+
+    .mobile-navbar__collapse
+        position: fixed
+        top: 70px
+        left: 0
+
+        width: 100%
+        max-height: calc(100vh - 70px)
+
+        overflow-y: auto
+
+        background: v.$white
+
+        z-index: 999
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .1)
 
     .mobile-navbar__content
-        padding: 20px
-
+        padding: 25px
 
     .mobile-navbar__nav
-        gap: 0
-
+        display: flex
+        flex-direction: column
+        gap: 5px
 
     .mobile-navbar__nav a
-        padding: 9px 0
-        font-size: 14px
+        padding: 12px 5px
 
+        color: v.$dark
+        text-decoration: none
+
+        font-size: 16px
+        font-weight: 500
+
+    .mobile-navbar__nav a:hover
+        color: v.$orange
 
     .mobile-navbar__bottom
-        margin-top: 15px
-        padding-top: 15px
+        margin-top: 20px
+        padding-top: 20px
 
+        display: flex
+        flex-direction: column
+        gap: 15px
+
+        border-top: 1px solid #eeeeee
+
+    .mobile-navbar__bottom a
+        color: v.$dark
+        text-decoration: none
+
+        font-size: 15px
+        font-weight: 500
 
     .mobile-navbar__button
-        padding: 10px 15px
-        font-size: 13px
+        display: block
 
+        padding: 13px 20px
 
-    // Hero
-    .hero
-        padding: 40px 0
+        border: 1px solid v.$orange
+        border-radius: 6px
 
-
-    .hero__small
-        margin-bottom: 12px
-        font-size: 13px
-
-
-    .hero__content h1
-        font-size: 30px
-        line-height: 1.2
-
-
-    .hero__buttons
-        width: 100%
-        margin-top: 25px
-
-        flex-direction: column
-        align-items: stretch
-
-
-    .main-button
-        width: 100%
-        min-height: 48px
-        padding: 10px 15px
-
-
-    // Intro
-    .intro
-        padding: 40px 0 30px
-
-
-    .intro__content h2
-        font-size: 25px
-        line-height: 1.25
-
-
-    .intro__content p
-        font-size: 14px
-        line-height: 1.6
-
-
-    // Tabs
-    .tabs__item
-        min-height: 50px
-        padding: 10px
-        font-size: 13px
-
-
-    // Platform
-    .platform__image
-        min-height: 230px
-        padding: 20px
-
-
-    .platform__visual
-        width: 90%
-        height: 80%
-
-
-    .platform__card
-        width: 70%
-        padding: 25px 10px
-        font-size: 18px
-
-
-    .platform__content
-        padding: 30px 18px
-
-
-    .platform__label
-        font-size: 12px
-
-
-    .platform__content h3
-        font-size: 25px
-        line-height: 1.25
-
-
-    .platform__content p
-        font-size: 14px
-        line-height: 1.6
-
-
-    .platform__list
-        padding-left: 18px
-
-
-        li
-            margin-bottom: 8px
-            font-size: 13px
-
-
-    .platform__actions
-        flex-direction: column
-        align-items: stretch
-        gap: 10px
-
-
-    .text-button
         text-align: center
 
-
-    // Stats
-    .stats
-        padding: 45px 0
-
-
-    .stats h2
-        margin-bottom: 30px
-        font-size: 25px
-
-
-    .stats__grid
-        grid-template-columns: 1fr
-        gap: 12px
-
-
-    .stats__item
-        padding: 20px 15px
-
-
-    .stats__item strong
-        font-size: 30px
-
-
-    .stats__item span
-        font-size: 13px
-
-
-    // Partners
-    .partners
-        padding: 45px 0
-
-
-    .partners h2
-        margin-bottom: 30px
-        font-size: 25px
-
-
-    .partners__logos
-        gap: 10px
-
-
-    .partners__logos div
-        min-width: 100px
-        padding: 12px
-        font-size: 13px
+        font-size: 14px !important
+        font-weight: 700 !important
