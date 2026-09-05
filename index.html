@@ -115,6 +115,25 @@
     </nav>
 
 </div>
+
+<script>
+    const mobileNavbarToggle = document.querySelector('.mobile-navbar__toggler');
+    const mobileNavbar = document.getElementById('mobileNavbar');
+
+    if (mobileNavbarToggle && mobileNavbar) {
+        mobileNavbarToggle.addEventListener('click', () => {
+            const isOpen = mobileNavbar.classList.toggle('is-open');
+            mobileNavbarToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        mobileNavbar.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileNavbar.classList.remove('is-open');
+                mobileNavbarToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+</script>
     <!-- ========================================
          MAIN
     ========================================= -->

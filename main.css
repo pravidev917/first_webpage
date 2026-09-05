@@ -40,9 +40,11 @@ button {
 
 .header {
   width: 100%;
+  max-width: 100%;
   height: 110px;
   background: #FFFFFF;
   border-bottom: 1px solid #E5E5E5;
+  overflow: hidden;
 }
 .header__container {
   width: calc(100% - 60px);
@@ -53,6 +55,7 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  min-width: 0;
 }
 
 .logo {
@@ -69,12 +72,15 @@ button {
   justify-content: center;
   gap: 25px;
   flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 .navigation a {
   color: #050C2A;
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
+  max-width: 100%;
 }
 .navigation a:hover {
   color: #F68921;
@@ -85,10 +91,12 @@ button {
   align-items: center;
   gap: 15px;
   flex-shrink: 0;
+  min-width: 0;
 }
 .header__right a {
   color: #050C2A;
   font-size: 14px;
+  max-width: 100%;
 }
 
 .header__button {
@@ -106,12 +114,15 @@ button {
 
 .hero {
   width: 100%;
+  max-width: 100%;
   min-height: 620px;
   padding: 80px 0;
   background: #F9F4EE;
+  overflow: hidden;
 }
 .hero__container {
   min-height: 460px;
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -119,6 +130,7 @@ button {
 }
 .hero__content {
   min-width: 0;
+  max-width: 100%;
 }
 .hero__small {
   margin-bottom: 20px;
@@ -133,6 +145,7 @@ button {
   font-weight: 700;
   line-height: 1.12;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
 .hero__buttons {
   margin-top: 35px;
@@ -169,6 +182,7 @@ button {
 .hero__art {
   position: relative;
   width: 100%;
+  max-width: 100%;
   height: 450px;
   min-width: 0;
   overflow: hidden;
@@ -639,6 +653,7 @@ button {
     line-height: 1;
   }
   .mobile-navbar__collapse {
+    display: none;
     position: fixed;
     top: 70px;
     left: 0;
@@ -648,6 +663,9 @@ button {
     background: #FFFFFF;
     z-index: 999;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  .mobile-navbar__collapse.is-open {
+    display: block;
   }
   .mobile-navbar__content {
     padding: 25px;
