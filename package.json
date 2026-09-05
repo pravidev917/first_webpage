@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch styles/main.sass:output/main.css",
-    "build": "sass styles/main.sass:output/main.css --style=compressed"
+    "sass": "sass --watch styles/main.sass:main.css",
+    "build": "sass styles/main.sass:main.css --style=compressed"
   },
   "keywords": [],
   "author": "",

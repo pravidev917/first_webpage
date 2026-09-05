@@ -5,97 +5,16 @@
 @use "platform"
 @use "stats"
 @use "partners"
-@media (max-width: 1100px)
-    .navigation
-        gap: 15px
-    .header__right
-        gap: 10px
-    .hero__container
-        grid-template-columns: 1fr
-    .hero__art
-        display: none
-    .platform
-        grid-template-columns: 1fr
-        &__image
-            min-height: 400px
-            border-radius: 20px
-        &__content
-            padding: 70px 50px
-            border-radius: 30px
-@media (max-width: 768px)
-    .header
-        height: 80px
-        &__container
-            width: calc(100% - 30px)
-    .navigation
-        display: none
-    .header__right
-        .search,
-        .language,
-        .login
-            display: none
-    .header__button
-        min-width: 130px
-    .hero
-        min-height: auto
-        padding: 80px 0
-        &__container
-            min-height: auto
-        &__content
-            padding: 0
-            h1
-                font-size: 46px
-                line-height: 1.05
-        &__buttons
-            flex-direction: column
-            align-items: flex-start
-    .intro
-        padding-top: 50px
-        &__content
-            h2
-                font-size: 42px
-            p
-                font-size: 17px
-    .tabs
-        height: auto
-        grid-template-columns: 1fr
-        border-radius: 20px
-        &__item
-            min-height: 70px
-    .platform
-        &__content
-            padding: 50px 25px
-            h3
-                font-size: 38px
-        &__actions
-            flex-direction: column
-            align-items: flex-start
-    .stats
-        padding: 50px 20px
-        h2
-            font-size: 42px
-        &__grid
-            grid-template-columns: repeat(2, 1fr)
-    .partners
-        h2
-            font-size: 42px
-        &__logos
-            flex-wrap: wrap
-            gap: 30px
-@media (max-width: 480px)
-    .container
-        width: calc(100% - 30px)
-    .hero__content h1
-        font-size: 40px
-    .stats__grid
-        grid-template-columns: 1fr
-    .main-button
-        width: 100%
-        &--orange
-            width: 100%
+// ========================================
+// TABLET / SIDEBAR
+// 250px - 980px
+// ========================================
 @media (min-width: 250px) and (max-width: 980px)
     body
         padding-left: 250px
+    // --------------------
+    // HEADER / SIDEBAR
+    // --------------------
     .header
         position: fixed
         top: 0
@@ -133,12 +52,48 @@
             display: block
     .header__button
         width: 100%
+        min-width: auto
+    // --------------------
+    // HERO
+    // --------------------
     .hero
+        min-height: auto
         padding: 60px 0
         &__container
             grid-template-columns: 1fr
+            min-height: auto
         &__art
             display: none
+        &__content
+            padding: 0
+            h1
+                font-size: 46px
+                line-height: 1.05
+        &__buttons
+            flex-direction: column
+            align-items: flex-start
+    // --------------------
+    // INTRO
+    // --------------------
+    .intro
+        padding-top: 50px
+        &__content
+            h2
+                font-size: 42px
+            p
+                font-size: 17px
+    // --------------------
+    // TABS
+    // --------------------
+    .tabs
+        height: auto
+        grid-template-columns: 1fr
+        border-radius: 20px
+        &__item
+            min-height: 70px
+    // --------------------
+    // PLATFORM
+    // --------------------
     .platform
         grid-template-columns: 1fr
         &__image
@@ -147,3 +102,41 @@
         &__content
             padding: 60px 40px
             border-radius: 30px
+            h3
+                font-size: 38px
+        &__actions
+            flex-direction: column
+            align-items: flex-start
+    // --------------------
+    // STATS
+    // --------------------
+    .stats
+        padding: 50px 20px
+        h2
+            font-size: 42px
+        &__grid
+            grid-template-columns: repeat(2, 1fr)
+    // --------------------
+    // PARTNERS
+    // --------------------
+    .partners
+        h2
+            font-size: 42px
+        &__logos
+            flex-wrap: wrap
+            gap: 30px
+// ========================================
+// SMALL MOBILE
+// Below 480px
+// ========================================
+@media (max-width: 480px)
+    .container
+        width: calc(100% - 30px)
+    .hero__content h1
+        font-size: 40px
+    .stats__grid
+        grid-template-columns: 1fr
+    .main-button
+        width: 100%
+        &--orange
+            width: 100%
