@@ -438,55 +438,65 @@ button {
   opacity: 0.65;
 }
 
-@media (max-width: 1100px) {
-  .navigation {
-    gap: 15px;
+@media (min-width: 250px) and (max-width: 980px) {
+  body {
+    padding-left: 250px;
   }
-  .header__right {
-    gap: 10px;
-  }
-  .hero__container {
-    grid-template-columns: 1fr;
-  }
-  .hero__art {
-    display: none;
-  }
-  .platform {
-    grid-template-columns: 1fr;
-  }
-  .platform__image {
-    min-height: 400px;
-    border-radius: 20px;
-  }
-  .platform__content {
-    padding: 70px 50px;
-    border-radius: 30px;
-  }
-}
-@media (max-width: 768px) {
   .header {
-    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    z-index: 1000;
   }
   .header__container {
-    width: calc(100% - 30px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+  .logo {
+    margin-bottom: 40px;
   }
   .navigation {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+  .header__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    margin-top: auto;
   }
   .header__right .search,
   .header__right .language,
   .header__right .login {
-    display: none;
+    display: block;
   }
   .header__button {
-    min-width: 130px;
+    width: 100%;
+    min-width: auto;
   }
   .hero {
     min-height: auto;
-    padding: 80px 0;
+    padding: 60px 0;
   }
   .hero__container {
+    grid-template-columns: 1fr;
     min-height: auto;
+  }
+  .hero__art {
+    display: none;
   }
   .hero__content {
     padding: 0;
@@ -516,8 +526,16 @@ button {
   .tabs__item {
     min-height: 70px;
   }
+  .platform {
+    grid-template-columns: 1fr;
+  }
+  .platform__image {
+    min-height: 400px;
+    border-radius: 20px;
+  }
   .platform__content {
-    padding: 50px 25px;
+    padding: 60px 40px;
+    border-radius: 30px;
   }
   .platform__content h3 {
     font-size: 38px;
